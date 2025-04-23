@@ -525,6 +525,40 @@ skills-content .progress h3 span {
     width: 60%;
 }
 
+.certif {
+    background-color: var(--second-bg-color);
+    padding: 5rem 9%;
+    text-align: center;
+}
+
+.certif-desc {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    max-width: 80rem;
+    margin: 0 auto 4rem;
+    line-height: 1.7;
+}
+
+.certif-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.certif-img img {
+    max-width: 100%;
+    height: auto;
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    box-shadow: 0 0 2rem rgba(0, 171, 240, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.certif-img img:hover {
+    transform: scale(1.05);
+}
+
 .contact {
     min-height: auto;
     padding-bottom: 7rem;

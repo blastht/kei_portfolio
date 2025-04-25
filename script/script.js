@@ -30,3 +30,8 @@ window.onscroll = () => {
     menuIcon.classList.remove('fa-xmark');
     navbar.classList.remove('active');
 };
+
+window.addEventListener('load', () => {
+    const loader = document.getElementById('page-loader');
+    loader.classList.add('hide');
+  });

@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Keitini COSSAVELLA, étudiant en BTS SIO. Découvrez mon parcours, mes compétences et mes projets.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="keywords" content="Site Portfolio, ASF Stage">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="shortcut icon" href="ico/photos.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="ico/kei.ico" type="image/x-icon">
     <script src="script/script.js" defer></script>
     <title>Présentation de Keitini COSSAVELLA - Portfolio</title>
 </head>
+<!-- Animation de chargement avec engrenages -->
+<div class="loader-container" id="page-loader">
+    <div class="gear" id="gear1">
+      <img src="images/gear1.png" alt="Engrenage 1" />
+    </div>
+    <div class="gear" id="gear2">
+      <img src="images/gear2.png" alt="Engrenage 2" />
+    </div>
+  </div>
+  
 <body>
     <header class="header">
         <a href="#home" class="logo">Keitini</a>
@@ -27,7 +37,7 @@
             <a href="#portfolio">Projets</a>
             <a href="#certif">Certification</a>
             <a href="#epreuve">Epreuve E5</a>
-            <a href="#veille">Veille Technologique</a>
+            <a href="#veille"> <br> Veille Technologique</a>
             <a href="#contact">Contactez-Moi</a>
         
             <span class="active-nav"></span>
@@ -39,7 +49,7 @@
             <br><br><br>
             <h2>Bonjour, </h2>
             <h2>Je m'appelle <span>Keitini COSSAVELLA</span></h2>
-            <p>Je suis <span>Étudiant en BTS SIO</span>, au lycée Jean Chaptal à Quimper, en France</p>
+            <div class="text-animate"><h3>Étudiant en BTS SIO</h3></div>
             <p>J'ai été en 1er et Terminale STI2D, et pour poursuivre mon enseignement, je suis venu en France pour faire un BTS.</p>
             <div class="home-sci">
                 <a href="https://www.facebook.com/profile.php?id=100079260985378" target="_blank" rel="noopener noreferrer" aria-label="Keitini sur Facebook"><i class='bx bxl-facebook'></i></a>
@@ -334,6 +344,8 @@
         <h2 class="heading">
             
             Epreuve <span>E5</span>
+
+            <p class="heading">Voici les projets qui sont traités dans le cadre de l'épreuve E5</p>
         </h2>
 
 

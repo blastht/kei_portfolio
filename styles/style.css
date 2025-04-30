@@ -1014,6 +1014,23 @@ skills-content .progress h3 span {
     cursor: pointer;
 }
 
+.btn-flash {
+    display: inline-block;
+    margin-top: 20px;
+    background: #00f5d4;
+    color: #1e1e2f;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px #00f5d4;
+    transition: transform 0.3s ease;
+  }
+  .btn-flash:hover {
+    transform: scale(1.05);
+  }
+  
+
 .footer {
     display: flex;
     justify-content: space-between;

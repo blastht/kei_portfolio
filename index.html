@@ -22,7 +22,19 @@
     </div>
   </div>
   
+  
+
 <body>
+    <!-- Loader utilisé pour sections spécifiques -->
+<div class="section-loader" id="section-loader">
+    <div class="gear" id="gear1">
+      <img src="images/gear1.png" alt="Engrenage 1" />
+    </div>
+    <div class="gear" id="gear2">
+      <img src="images/gear2.png" alt="Engrenage 2" />
+    </div>
+  </div>
+  
     <header class="header">
         <a href="#home" class="logo">Keitini</a>
         
@@ -340,38 +352,112 @@
     </section>
     
     <section class="epreuve" id="epreuve">
-
-        <h2 class="heading">
-            
-            Epreuve <span>E5</span>
-
-            <p class="heading">Voici les projets qui sont traités dans le cadre de l'épreuve E5</p>
-        </h2>
-
-
-    </section>
-
-    <section class="veille" id="veille">
-
-        <h2 class="heading">
-            Veille <span>Technologique</span>
-        </h2>
-
-        <h2>La définition de la Veille Technologique</h2>
-        <p>La veille technologique, est l'élément important, consistant à surveiller et mettre à jour les évolutions
-            techniques, innovations dans le secteur d'activité informatique.
-
-            Son objectif comprend la surveillance, la collecte, le partage et la diffusion d'information permettant
-            d'anticiper ou s'informer sur les changements en matière de recherche. Le but est d'évaluer l'impact sur l'environnement et 
-            l'organisation.
-        </p>
-
+        <h2 class="heading">Épreuve <span>E5</span></h2>
+        <p class="epreuve-subtitle">Une épreuve essentielle pour valider les compétences professionnelles en BTS SIO SLAM.</p>
+      
         
+        <!-- Petite image cliquable -->
+<div class="epreuve-image">
+    <img src="images/epreuveE5_images.png" alt="Illustration Epreuve E5" loading="lazy" onclick="openLightbox(this)">
+  </div>
+  
+  <!-- Lightbox UNIQUE -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img src="images/epreuveE5_images.png" alt="Aperçu de l'image" id="lightbox-img">
+  </div>
 
-    </section>
+        <div class="epreuve-container">
+      
+          <!-- Présentation générale -->
+          <div class="epreuve-card">
+            <h3>Qu'est-ce que l'Épreuve E5 ? 🎓</h3>
+            <p>
+              L’épreuve E5 repose sur deux projets concrets réalisés en entreprise.  
+              Elle évalue la capacité à concevoir, développer et sécuriser des applications informatiques en milieu professionnel.
+            </p>
+          </div>
+      
+          <!-- Stage 1 -->
+          <div class="epreuve-card">
+            <h3>Stage 1 : Développeur à l'AASF📜</h3>
+            <p>
+              Assistance et maintenance des infrastructures informatiques publiques : installations, dépannages, interventions à distance.
+            </p>
+            <div class="epreuve-btns">
+              <a href="stage1.html" class="btn-epreuve" target="_blank">En savoir plus</a>
+              <a href="documents/stage1-dcsi.pdf" class="btn-epreuve" target="_blank">Rapport de Stage</a>
+            </div>
+          </div>
+      
+          <!-- Stage 2 -->
+          <div class="epreuve-card">
+            <h3>Stage 2 : Développeur à l'AASF 2 📜</h3>
+            <p>
+              Refonte complète d'un site WordPress e-commerce avec migration de 800 produits, optimisations SEO, et gestion des réseaux sociaux.
+            </p>
+            <div class="epreuve-btns">
+              <a href="epreuve-e4-2.html#epreuve2" class="btn-epreuve" target="_blank">En savoir plus</a>
+              <a href="documents/stage2-jbadev.pdf" class="btn-epreuve" target="_blank">Rapport de Stage</a>
+            </div>
+          </div>
+      
+        </div>
+      </section>
+      
+      
+      
+      
+
+    <!-- ======= Veille Technologique Section ======= -->
+<section id="veille" class="veille">
+    <div class="container">
+      <div class="section-title">
+        <h2>Veille Technologique 🔍</h2>
+        <h4>Thème : Vulnérabilités, menaces et outils de protection</h4>
+        <p>Ma veille porte sur l'évolution constante des menaces et des outils de cybersécurité. Elle me permet de surveiller les attaques, les failles et les nouvelles protections pour rester informé des tendances critiques dans le domaine.</p>
+      </div>
+  
+      <div class="veille-details">
+        <h4>Outils de collecte utilisés :</h4>
+        <ul>
+          <li><strong>Feedly</strong> – Agrégateur de flux RSS (sites spécialisés en cybersécurité comme Krebs on Security, CERT, ZDNet...)</li>
+          <li><strong>Notion</strong> – Organisation et annotation des articles</li>
+          <li><strong>Google Alertes</strong> – Suivi temps réel des nouveaux incidents</li>
+        </ul>
+  
+        <h4>Méthodologie :</h4>
+        <ul>
+          <li>Classification des informations en 2 catégories : <em>Menaces émergentes</em> & <em>Technologies de protection</em></li>
+          <li>Priorisation des sources fiables, élimination du bruit informationnel</li>
+          <li>Utilisation de mots-clés : "cybersécurité", "ransomware", "zero-day", "IoT security"</li>
+        </ul>
+  
+        <h4>Difficultés rencontrées :</h4>
+        <p>La quantité massive d'informations et la rapidité d'évolution des menaces a nécessité l'usage de filtres avancés et le suivi d'experts sur LinkedIn et Reddit pour un tri plus efficace.</p>
+  
+        <h4>Bilan :</h4>
+        <ul>
+          <li><strong>Quantitatif :</strong> 15 articles collectés, analysés, et catégorisés</li>
+          <li><strong>Qualitatif :</strong> Bonne couverture des risques actuels (phishing, ransomware) mais besoin d'approfondir certains outils</li>
+        </ul>
+  
+        <h4>Perspectives d'amélioration :</h4>
+        <ul>
+          <li>Tester Inoreader et d'autres agrégateurs pour diversifier les sources</li>
+          <li>Participer à des conférences cybersécurité pour enrichir l'analyse</li>
+          <li>Consolider les résultats dans un rapport complet avec infographies</li>
+        </ul>
+      </div>
+  
+      <div class="veille-buttons">
+        <a href="PDF/VeilleTechnologique_KeitiniCossavella.pdf" class="btn" target="_blank">📄 Voir le document complet</a>
+      </div>
+    </div>
+  </section>
+  
     <section class="contact" id="contact">
         <h2 class="heading">
-            Contact <span>Me.</span>
+            Contactez <span>Moi.</span>
         </h2>
 
         <form action="#">

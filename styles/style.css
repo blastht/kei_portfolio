@@ -687,6 +687,259 @@ skills-content .progress h3 span {
     transform: scale(1.05);
 }
 
+.epreuve {
+    background: var(--second-bg-color);
+    padding: 7rem 9% 5rem;
+    text-align: center;
+}
+
+.epreuve-subtitle {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 5rem;
+    animation: fadeIn 2s ease forwards;
+    opacity: 0;
+}
+
+.epreuve-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 3rem;
+    align-items: stretch;
+}
+
+.epreuve-card {
+    background: var(--bg-color);
+    border: 0.2rem solid var(--main-color);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    text-align: left;
+    transition: 0.4s;
+    box-shadow: 0 0 1rem rgba(0, 171, 240, 0.3);
+}
+
+.epreuve-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 2rem rgba(0, 171, 240, 0.5);
+}
+
+.epreuve-card h3 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+}
+
+.epreuve-card p, .epreuve-card ul {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+.epreuve-card ul {
+    margin-top: 1rem;
+    padding-left: 2rem;
+}
+
+.epreuve-card ul li {
+    list-style: disc;
+    margin-bottom: 0.8rem;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.epreuve-image {
+    margin-bottom: 4rem;
+}
+
+.epreuve-image img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 1.5rem rgba(0, 171, 240, 0.4);
+}
+
+.epreuve-btns {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-epreuve {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: .6rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-epreuve:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+.lightbox {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 171, 240, 0.5);
+    animation: zoomIn 0.5s ease;
+  }
+  
+  @keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+.lightbox {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem rgba(0, 171, 240, 0.5);
+  animation: zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Extraits CSS personnalisés dans styles.css */
+.stage-detail {
+    padding: 5rem 9%;
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+.stage-title {
+    font-size: 4rem;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.stage-content p, .stage-content ul {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.stage-content ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+.btn-epreuve {
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0.6rem;
+    transition: 0.3s;
+}
+
+.btn-epreuve:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+  
+.veille {
+    background: var(--second-bg-color);
+    padding: 7rem 9% 5rem;
+    text-align: center;
+    color: var(--text-color);
+  }
+  
+  .section-title h2 {
+    font-size: 4rem;
+    color: var(--main-color);
+    margin-bottom: 2rem;
+  }
+  
+  .section-title h4 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .section-title p {
+    font-size: 1.6rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+  
+  .veille-details {
+    text-align: left;
+    margin-top: 3rem;
+    font-size: 1.6rem;
+  }
+  
+  .veille-details ul {
+    margin: 2rem 0;
+    padding-left: 2rem;
+    list-style-type: disc;
+  }
+  
+  .veille-buttons {
+    margin-top: 4rem;
+  }
+  
+  .veille-buttons .btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--main-color);
+    color: var(--bg-color);
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+  
+  .veille-buttons .btn:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+  }
+
+
+  
+
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
@@ -1040,4 +1293,27 @@ skills-content .progress h3 span {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
+
+/* Loader pour sections */
+.section-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-loader.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-in;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
 

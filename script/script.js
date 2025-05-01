@@ -77,4 +77,29 @@ window.addEventListener('load', () => {
     lightboxImg.src = ""; // on vide après fermeture
   }
   
+  let deferredPrompt;
+const installBanner = document.getElementById('installBanner');
+const installBtn = document.getElementById('installBtn');
+
+// Écoute l'événement qui déclenche l'installation possible
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault(); // empêche la bannière automatique
+  deferredPrompt = e;
+  installBanner.classList.remove('hidden'); // montre notre bannière personnalisée
+});
+
+// Quand l'utilisateur clique sur le bouton
+installBtn.addEventListener('click', () => {
+  installBanner.classList.add('hidden'); // on cache la bannière
+  deferredPrompt.prompt(); // on affiche la vraie demande d'installation
+  deferredPrompt.userChoice.then((choiceResult) => {
+    if (choiceResult.outcome === 'accepted') {
+      console.log('Utilisateur a accepté l’installation');
+    } else {
+      console.log('Utilisateur a refusé l’installation');
+    }
+    deferredPrompt = null;
+  });
+});
+
   

@@ -1,196 +1,153 @@
-<!-- Fichier : stage1.html -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stage 1 - DCSI de Quimper</title>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stage 1 - DCSI de Quimper</title>
+  <link rel="stylesheet" href="styles/style.css"> <!-- Ton CSS -->
+  <script src="script/script.js"></script>
+  <link rel="shortcut icon" href="ico/kei.ico" type="image/x-icon"> <!-- Icône de la page -->
 </head>
 <body>
 
-<!-- ======= Section Présentation du Stage ======= -->
-<section id="epreuve1" class="skills section-bg">
-  <div class="container">
-    <div class="section-title">
-      <h2>Projet n°1 (Stage de Première Année à la DCSI de Quimper) 📜</h2>
-    </div>
+  
+  
+  
+  <!-- STAGE 1 -->
+<section class="stage-detail" id="stage1">
+  <h1 class="stage-title fade-in">Stage de Première Année – DCSI de Quimper</h1>
 
-    <h2>Présentation de l'entreprise</h2>
-    <br><br>
-    <img src="assets/img/e4/dcsi.png" alt="DCSI" style="float:left" />
-    <p>
-      <br>Situé au Centre Technique de Quimper, la DCSI (Direction Communautaire des Systèmes d'Information) gère les infrastructures publiques informatiques de Quimper et ses environs.
-      <br><br>Elle supervise de nombreux services tels que les mairies, les médiathèques, la police municipale et d'autres institutions publiques.
-    </p>
-  </div>
-</section>
-
-<!-- ======= Section Espace de Travail ======= -->
-<section class="skills section-bg">
-  <div class="container">
-    <h2>Présentation de mon espace de travail</h2>
-    <br><br>
-    <img src="assets/img/e4/espace.png" alt="Espace de Travail" style="float:left" />
-    <p>
-      <br>Mon espace était constitué d'un ordinateur Tiny Lenovo Core i3, 8Go de RAM et SSD 250Go, accompagné d'un écran Philips, d'une souris Logitech et d'un clavier Lenovo.
-      <br><br>Un switch CubiQ connectait tous les périphériques, offrant flexibilité et efficacité.
-    </p>
-  </div>
-</section>
-
-<!-- ======= Section Départements rencontrés ======= -->
-<section class="skills section-bg">
-  <div class="container">
-    <h2>Présentation des Départements rencontrés</h2>
-    <br><br>
-
-    <!-- Accordion 1 -->
-    <div class="item">
-      <div class="item-name">
-        <p>Section de management du matériel informatique</p>
-        <div class="item-arrow"></div>
-      </div>
-      <div class="item-wrapper">
-        <p>
-          Préparation et conformité du matériel avant livraison aux services publics (PC, smartphones, périphériques). Installation de logiciels et paramétrages réseau standardisés.
-        </p>
+  <div class="stage-content slide-in">
+    <h2>📌 Présentation de l'association</h2>
+    <div class="stage-illustration">
+      <img src="images/aasf.png" alt="Logo DCSI">
+      <p>L’AASF (Amicale des Artistes Sans Frontières) est une association à but non lucratif qui promeut les artistes du monde entier, grâce à des expositions, des réseaux de mise en relation, et un futur réseau social artistique. Son financement repose uniquement sur des dons et cotisations.</p>
+      <div class="btn-box btns">
+        <a href="https://artistessansfrontieres.fr/" class="btn">Voir le site</a>
       </div>
     </div>
 
-    <!-- Accordion 2 -->
-    <div class="item">
-      <div class="item-name">
-        <p>Section d'aide et contrôle à distance</p>
-        <div class="item-arrow"></div>
-      </div>
-      <div class="item-wrapper">
-        <p>
-          Assistance technique par ticket (GLPI) ou téléphone. Résolution à distance via LogMeIn ou intervention en direct sur site si nécessaire.
-        </p>
-      </div>
+    <h2>💼 Missions réalisées</h2>
+<div class="accordion-section">
+  <div class="item">
+    <div class="item-name" onclick="toggleAccordion(this)">
+      <p>📀 Site Pseudo/Portfolio</p>
+      <span class="item-arrow">▶</span>
     </div>
-
-    <!-- Accordion 3 -->
-    <div class="item">
-      <div class="item-name">
-        <p>Section de techniciens sur place</p>
-        <div class="item-arrow"></div>
-      </div>
-      <div class="item-wrapper">
-        <p>
-          Intervention sur site pour dépannage physique des appareils défaillants (écrans, ordinateurs, imprimantes, etc.).
-        </p>
-      </div>
-    </div>
-
-    <!-- Accordion 4 -->
-    <div class="item">
-      <div class="item-name">
-        <p>Section d'administration réseau</p>
-        <div class="item-arrow"></div>
-      </div>
-      <div class="item-wrapper">
-        <p>
-          Gestion et sécurisation du réseau interne : VLAN, VPN, pare-feu, proxy, authentification utilisateurs.
-        </p>
-      </div>
-    </div>
-
-    <!-- Accordion 5 -->
-    <div class="item">
-      <div class="item-name">
-        <p>Section développement interne</p>
-        <div class="item-arrow"></div>
-      </div>
-      <div class="item-wrapper">
-        <p>
-          Développement d'applications internes, scripts automatisés (PowerShell) et maintenance des outils logiciels.
-        </p>
+    <div class="item-wrapper">
+      <p>J’ai crée un portfolio pour me présenter en générale pour mieux valoriser mon entrée en tant que Développeur.</p>
+      <div class="btn-box btns">
+        <a href="https://stage.asf-web.fr/kei/index.html" class="btn">Voir mon portfolio</a>
       </div>
     </div>
   </div>
-</section>
 
-<!-- ======= Section Missions réalisées ======= -->
-<section class="skills section-bg">
-  <div class="container">
-    <h2>Présentation des Missions réalisées</h2>
-    <br><br>
-
-    <!-- Mission 1 -->
-    <div class="item">
-      <div class="item-name">
-        <p>Installation de Windows 10</p>
-        <div class="item-arrow"></div>
-      </div>
-      <div class="item-wrapper">
-        <p>
-          Déploiement de Windows 10 et des logiciels métiers sur des PC neufs destinés aux infrastructures publiques.
-        </p>
-      </div>
+  <div class="item">
+    <div class="item-name" onclick="toggleAccordion(this)">
+      <p>🛠️ Site Next.JS en apprentissage</p>
+      <span class="item-arrow">▶</span>
     </div>
-
-    <!-- Mission 2 -->
-    <div class="item">
-      <div class="item-name">
-        <p>Déplacement pour dépannage dans une école</p>
-        <div class="item-arrow"></div>
-      </div>
-      <div class="item-wrapper">
-        <p>
-          Diagnostic et remplacement de câbles HDMI/USB défectueux pour rétroprojecteur. Changement de disque dur sur poste scolaire.
-        </p>
-      </div>
-    </div>
-
-    <!-- Mission 3 -->
-    <div class="item">
-      <div class="item-name">
-        <p>Préparation de dons informatiques</p>
-        <div class="item-arrow"></div>
-      </div>
-      <div class="item-wrapper">
-        <p>
-          Inventaire, remplacement de SSD par HDD, et nettoyage sécurisé de disques destinés à Linux Quimper et aux Vieilles Charrues.
-        </p>
-      </div>
-    </div>
-
-    <!-- Mission 4 -->
-    <div class="item">
-      <div class="item-name">
-        <p>Assistance GLPI & LogMeIn</p>
-        <div class="item-arrow"></div>
-      </div>
-      <div class="item-wrapper">
-        <p>
-          Résolution d'incidents logiciels et matériels à distance, gestion de tickets GLPI et interventions rapides via LogMeIn.
-        </p>
-      </div>
-    </div>
-
-    <!-- Mission 5 -->
-    <div class="item">
-      <div class="item-name">
-        <p>Migration et montage de matériel</p>
-        <div class="item-arrow"></div>
-      </div>
-      <div class="item-wrapper">
-        <p>
-          Remise en service de postes obsolètes par mises à jour, migrations réseau, montages et tests de nouveaux postes de travail.
-        </p>
-      </div>
+    <div class="item-wrapper">
+      <p>Un site exemplaire pour apprendre le Next.JS en profondeur en se basant sur l'apprentissage avant les cas de pratiques concrets.</p>
+      <img class="responsive-img" src="images/stage/next-js_app.png" alt="Aperçu Next.js">
+      <p>Légende : <em>Application Next.JS côté client</em></p>
     </div>
   </div>
-</section>
+  
 
-<!-- ======= Retour ======= -->
-<div class="valo" style="text-align:center; margin-top: 2rem;">
-  <a href="index.html#epreuve">
-    <p><span class="bg"></span><span class="base"></span><span class="text">⬅ Retour à l'accueil</span></p>
-  </a>
+  <div class="item">
+    <div class="item-name" onclick="toggleAccordion(this)">
+      <p>📦 Version 1 du Site Mascotte Auguste</p>
+      <span class="item-arrow">▶</span>
+    </div>
+    <div class="item-wrapper">
+      <p>J'ai crée le site pour présenter au mieux la mascotte de l'Entreprise "Auguste".</p>
+      <img class="responsive-img" src="images/stage/parrot.png" alt="Perroquet Mascotte">
+      <p>Légende : <em>Site Web Auguste</em></p>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-name" onclick="toggleAccordion(this)">
+      <p>🎁 Site vitrine pour locations de chambres.</p>
+      <span class="item-arrow">▶</span>
+    </div>
+    <div class="item-wrapper">
+      <p>Remise à neuf de postes (formatage, réinstallation, nettoyage physique) en vue de dons à d’autres associations locales.</p>
+      <img class="responsive-img" src="images/stage/villaauguste.png" alt="Site Web VillaAuguste">
+      <p>Légende : <em>Site Web Auguste</em></p>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-name" onclick="toggleAccordion(this)">
+      <p>🧰 Site Refonte Web d'Auguste</p>
+      <span class="item-arrow">▶</span>
+    </div>
+    <div class="item-wrapper">
+      <p>J'ai reformé et recrée les codes de base du site Auguste pour une meilleure visibilité .</p>
+      <img class="responsive-img" src="images/stage/auguste_parrot.png" alt="Site Web VillaAuguste">
+      <p>Légende : <em>Site Web Auguste Refonté</em></p>
+    </div>
+  </div>
 </div>
+
+
+<h2>🧑‍💻 Compétences mobilisées</h2>
+
+<div class="competence-accordeon">
+  <div class="competence-item" onclick="toggleCompetence(this)">
+    <span class="competence-title">🧠 Gérer le patrimoine informatique</span>
+    <div class="competence-content">
+      <p>Inventaire avec GLPI, suivi des équipements, attribution aux utilisateurs et documentation rigoureuse.</p>
+    </div>
+  </div>
+
+  <div class="competence-item" onclick="toggleCompetence(this)">
+    <span class="competence-title">📌 Travailler en mode projet</span>
+    <div class="competence-content">
+      <p>Utilisation de Trello, planification des tâches, communication régulière et gestion des délais.</p>
+    </div>
+  </div>
+
+  <div class="competence-item" onclick="toggleCompetence(this)">
+    <span class="competence-title">🔧 Mettre à disposition des services informatiques</span>
+    <div class="competence-content">
+      <p>Installation et configuration de systèmes d’exploitation, logiciels bureautiques, accès réseau et périphériques.</p>
+    </div>
+  </div>
+
+  <div class="competence-item" onclick="toggleCompetence(this)">
+    <span class="competence-title">🚑 Répondre aux incidents et demandes</span>
+    <div class="competence-content">
+      <p>Interventions sur site et à distance (LogMeIn), résolution de pannes, réactivité et écoute utilisateur.</p>
+    </div>
+  </div>
+
+  <div class="competence-item" onclick="toggleCompetence(this)">
+    <span class="competence-title"> 🛜 Développer la présence en ligne de l’organisation</span>
+    <div class="competence-content">
+      <p>Interventions sur site et à distance (LogMeIn), résolution de pannes, réactivité et écoute utilisateur.</p>
+    </div>
+  </div>
+</div>
+
+
+    <h2>📷 Espace de travail</h2>
+    <img src="images/stage/stage.png" alt="Espace de travail AASF" class="zoom-img">
+
+    <p class="description">Poste bureautique avec PC branché sur Câble HDMI.</p>
+
+    <div class="btn-box btns">
+      <a href="index.html#epreuve1" class="btn">⬅ Retour</a>
+    </div>
+  </div>
+</section>
+
+
+  <footer style="text-align:center; padding:20px; background-color:#f8f8f8;">
+    <p>© Kei LE BOSS – Portfolio BTS SIO SLAM</p>
+  </footer>
 
 </body>
 </html>

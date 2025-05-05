@@ -1027,9 +1027,11 @@ skills-content .progress h3 span {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     z-index: 1000;
   }
+  
   .banner.hidden {
     display: none;
   }
+  
   #installBtn {
     margin-top: 10px;
     padding: 10px 20px;
@@ -1345,3 +1347,307 @@ skills-content .progress h3 span {
   }
   
 
+  .accordion-section {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+  }
+  
+  .accordion-item {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .accordion-button {
+    width: 100%;
+    text-align: left;
+    background: #f7f7f7;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .accordion-button:hover {
+    background-color: #eaeaea;
+  }
+  
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  
+  .accordion-content.open {
+    max-height: 500px; /* Assez grand pour tout contenu */
+  }
+ 
+  
+  .item-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: #0a2a3f;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.item-name:hover {
+    background-color: #114d6c;
+}
+
+/* Par défaut, le contenu est caché */
+.item-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  /* Quand on clique (via JS), item--open s’ajoute */
+  .item.item--open .item-wrapper {
+    max-height: 1000px; /* Assez grand pour tout afficher. Ajuste si besoin */
+  }
+  .item-arrow {
+    transition: transform 0.3s ease;
+  }
+  
+  .item.item--open .item-arrow {
+    transform: rotate(90deg);
+  }
+    
+  .item-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    padding: 0 1rem;
+}
+
+.item--open .item-wrapper {
+    max-height: 1000px;
+    padding: 1rem;
+}
+
+@media (max-width: 600px) {
+    .item-name p {
+      font-size: 1.4rem;
+    }
+  
+    .item-wrapper ul li, .item-wrapper p {
+      font-size: 1.4rem;
+    }
+  
+    .item-arrow {
+      font-size: 1.6rem;
+    }
+  
+    .item-wrapper img, .item-wrapper iframe {
+      width: 100% !important;
+      height: auto;
+    }
+  }
+  
+
+  /* Animations personnalisées */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in forwards;
+  }
+  
+  .fade-in-delay {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in 0.5s forwards;
+  }
+  
+  .slide-in {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideIn 1s ease-out forwards;
+  }
+  
+  .zoom-img {
+    width: 80%;
+    margin: 2rem auto;
+    display: block;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+  }
+  
+  .zoom-img:hover {
+    transform: scale(1.05);
+  }
+  
+  .animated-list li {
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  .animated-list li:nth-child(1) { animation-delay: 0.2s; }
+  .animated-list li:nth-child(2) { animation-delay: 0.4s; }
+  .animated-list li:nth-child(3) { animation-delay: 0.6s; }
+  .animated-list li:nth-child(4) { animation-delay: 0.8s; }
+  .animated-list li:nth-child(5) { animation-delay: 1s; }
+  
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Mise en forme image + texte */
+  .stage-illustration {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .stage-illustration img {
+    width: 180px;
+    border-radius: 10px;
+    border: 2px solid var(--main-color);
+  }
+  
+  .stage-illustration p {
+    flex: 1;
+    font-size: 1.6rem;
+    line-height: 1.8;
+  }
+  
+
+  .accordion-section {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem 0;
+  }
+  
+  .item {
+    background-color: var(--bg-color);
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .item-name {
+    cursor: pointer;
+    background-color: var(--second-bg-color);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--text-color);
+    transition: background 0.3s ease;
+  }
+  
+  .item-name:hover {
+    background-color: #0f2e4a;
+  }
+  
+  .item-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 2rem;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+  
+  .item--open .item-wrapper {
+    max-height: 500px;
+    padding: 1rem 2rem;
+  }
+  
+  .item-arrow {
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .item--open .item-arrow {
+    transform: rotate(90deg);
+  }
+
+  .competence-accordeon {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .competence-item {
+    background: var(--second-bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .competence-title {
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--main-color);
+    position: relative;
+    transition: background 0.3s ease;
+  }
+  
+  .competence-item:hover .competence-title {
+    background-color: #0f2e4a;
+  }
+  
+  .competence-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 2rem;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+  
+  .competence-item.open .competence-content {
+    max-height: 300px;
+    padding: 1rem 2rem;
+  }
+  
+ /* Images responsives dans les accordéons */
+.item-wrapper img.responsive-img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 0.8rem;
+    margin-top: 1rem;
+    box-shadow: 0 0 10px rgba(0, 171, 240, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .item-wrapper img.responsive-img:hover {
+    transform: scale(1.02);
+  }
+   

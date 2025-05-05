@@ -31,75 +31,62 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
 
-window.addEventListener('load', () => {
-    const loader = document.getElementById('page-loader');
-    loader.classList.add('hide');
-  });
-
-  const sectionLoader = document.getElementById('section-loader');
-
-  // Sections cibles pour le chargement
-  const sectionsWithLoader = ['#portfolio', '#epreuve', '#veille'];
-
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href');
-
-      // Vérifie si le lien cible une section avec loader
-      if (sectionsWithLoader.includes(targetId)) {
-        e.preventDefault(); // Empêche la navigation instantanée
-        sectionLoader.classList.add('active');
-
-        // Petite pause avant scroll pour afficher le loader
-        setTimeout(() => {
-          sectionLoader.classList.remove('active');
-          document.querySelector(targetId).scrollIntoView({
-            behavior: 'smooth'
-          });
-        }, 2000); // durée du chargement
-      }
-    });
-  });
-
-  function openLightbox(imgElement) {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-  
-    lightboxImg.src = imgElement.src; // on remplit avec l'image cliquée
-    lightbox.style.display = 'flex';
-  }
-  
-  function closeLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-  
-    lightbox.style.display = 'none';
-    lightboxImg.src = ""; // on vide après fermeture
-  }
-  
-  let deferredPrompt;
+let deferredPrompt = null; // Stocke l'événement pour l’utiliser plus tard
 const installBanner = document.getElementById('installBanner');
 const installBtn = document.getElementById('installBtn');
 
-// Écoute l'événement qui déclenche l'installation possible
+// ⚡ Écoute l'événement lancé par le navigateur quand l'installation est dispo
 window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault(); // empêche la bannière automatique
-  deferredPrompt = e;
-  installBanner.classList.remove('hidden'); // montre notre bannière personnalisée
+  e.preventDefault(); // 🔒 Empêche l'affichage auto de la bannière Chrome
+  deferredPrompt = e; // 📦 On stocke l'événement pour plus tard
+  if (installBanner) {
+    installBanner.classList.remove('hidden'); // 🪄 Affiche notre bannière personnalisée
+  }
 });
 
-// Quand l'utilisateur clique sur le bouton
-installBtn.addEventListener('click', () => {
-  installBanner.classList.add('hidden'); // on cache la bannière
-  deferredPrompt.prompt(); // on affiche la vraie demande d'installation
-  deferredPrompt.userChoice.then((choiceResult) => {
-    if (choiceResult.outcome === 'accepted') {
-      console.log('Utilisateur a accepté l’installation');
-    } else {
-      console.log('Utilisateur a refusé l’installation');
+// 🎯 Quand l'utilisateur clique sur le bouton "Ajouter à l’écran d’accueil"
+if (installBtn) {
+  installBtn.addEventListener('click', () => {
+    if (installBanner) {
+      installBanner.classList.add('hidden'); // 👋 Cache la bannière après clic
     }
-    deferredPrompt = null;
+
+    if (deferredPrompt) {
+      deferredPrompt.prompt(); // 🧙‍♂️ Déclenche la vraie bannière native d'installation
+
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('✅ Utilisateur a accepté l’installation');
+        } else {
+          console.log('❌ Utilisateur a refusé l’installation');
+        }
+        deferredPrompt = null; // 🧼 On nettoie après
+      });
+    }
+  });
+}
+
+document.querySelectorAll('.item-name').forEach(header => {
+  header.addEventListener('click', () => {
+    const parent = header.parentElement;
+    const isOpen = parent.classList.contains('item--open');
+
+    // Ferme tous les autres
+    document.querySelectorAll('.item').forEach(item => {
+      item.classList.remove('item--open');
+    });
+
+    // Ouvre l'actuel si ce n'était pas déjà ouvert
+    if (!isOpen) {
+      parent.classList.add('item--open');
+    }
   });
 });
+header.setAttribute('aria-expanded', !isOpen);
 
-  
+
+  function toggleAccordion(element) {
+    const item = element.parentElement;
+    item.classList.toggle("item--open");
+  }
+

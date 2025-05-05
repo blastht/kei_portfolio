@@ -1026,22 +1026,50 @@ skills-content .progress h3 span {
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
   }
   
-  .banner.hidden {
-    display: none;
+  .banner.visible {
+    opacity: 1;
+    pointer-events: all;
   }
   
-  #installBtn {
-    margin-top: 10px;
-    padding: 10px 20px;
+  
+  .install-section {
+    margin-top: 3rem;
+    text-align: center;
+    background: linear-gradient(135deg, #00f5d4, #00c2f0);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 171, 240, 0.4);
+  }
+  
+  .btn-install {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
     background: #1e1e2f;
     color: white;
     border: none;
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
+    transition: background 0.3s ease;
   }
+  
+  .btn-install:hover {
+    background: #00abf0;
+    color: #081b29;
+  }
+  
+  
+  .banner p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  
   
 
 .footer {

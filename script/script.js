@@ -1,71 +1,69 @@
+// 🍔 Menu burger
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 
 menuIcon.onclick = () => {
-    menuIcon.classList.toggle('fa-xmark');
-    navbar.classList.toggle('active');
+  menuIcon.classList.toggle('fa-xmark');
+  navbar.classList.toggle('active');
 };
 
+// 🔗 Scroll actif sur les liens de navigation
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
 window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+  let top = window.scrollY;
 
-        if (top >= offset && top < offset + height) {
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            });
-        }
-    });
+  sections.forEach(sec => {
+    let offset = sec.offsetTop - 150;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute('id');
 
-    let header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 100);
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+      });
+    }
+  });
 
-    menuIcon.classList.remove('fa-xmark');
-    navbar.classList.remove('active');
+  // Sticky Header
+  let header = document.querySelector('header');
+  header.classList.toggle('sticky', top > 100);
+
+  // Ferme menu mobile
+  menuIcon.classList.remove('fa-xmark');
+  navbar.classList.remove('active');
 };
 
-let deferredPrompt = null; // Stocke l'événement pour l’utiliser plus tard
-const installBanner = document.getElementById('installBanner');
+let deferredPrompt = null;
 const installBtn = document.getElementById('installBtn');
 
-// ⚡ Écoute l'événement lancé par le navigateur quand l'installation est dispo
 window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault(); // 🔒 Empêche l'affichage auto de la bannière Chrome
-  deferredPrompt = e; // 📦 On stocke l'événement pour plus tard
-  if (installBanner) {
-    installBanner.classList.remove('hidden'); // 🪄 Affiche notre bannière personnalisée
-  }
+  e.preventDefault();
+  deferredPrompt = e;
+  installBtn.style.display = 'inline-block'; // Affiche le bouton quand prêt
 });
 
-// 🎯 Quand l'utilisateur clique sur le bouton "Ajouter à l’écran d’accueil"
 if (installBtn) {
   installBtn.addEventListener('click', () => {
-    if (installBanner) {
-      installBanner.classList.add('hidden'); // 👋 Cache la bannière après clic
-    }
-
     if (deferredPrompt) {
-      deferredPrompt.prompt(); // 🧙‍♂️ Déclenche la vraie bannière native d'installation
-
+      deferredPrompt.prompt();
       deferredPrompt.userChoice.then((choiceResult) => {
         if (choiceResult.outcome === 'accepted') {
-          console.log('✅ Utilisateur a accepté l’installation');
+          console.log("✅ Installation acceptée !");
         } else {
-          console.log('❌ Utilisateur a refusé l’installation');
+          console.log("❌ Installation refusée");
         }
-        deferredPrompt = null; // 🧼 On nettoie après
+        deferredPrompt = null;
       });
     }
   });
 }
 
+
+
+// 📂 Accordéons (style "item-name" cliquable)
 document.querySelectorAll('.item-name').forEach(header => {
   header.addEventListener('click', () => {
     const parent = header.parentElement;
@@ -74,19 +72,14 @@ document.querySelectorAll('.item-name').forEach(header => {
     // Ferme tous les autres
     document.querySelectorAll('.item').forEach(item => {
       item.classList.remove('item--open');
+      const name = item.querySelector('.item-name');
+      if (name) name.setAttribute('aria-expanded', 'false');
     });
 
-    // Ouvre l'actuel si ce n'était pas déjà ouvert
+    // Ouvre le bon
     if (!isOpen) {
       parent.classList.add('item--open');
+      header.setAttribute('aria-expanded', 'true');
     }
   });
 });
-header.setAttribute('aria-expanded', !isOpen);
-
-
-  function toggleAccordion(element) {
-    const item = element.parentElement;
-    item.classList.toggle("item--open");
-  }
-

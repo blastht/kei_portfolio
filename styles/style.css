@@ -1432,36 +1432,18 @@ skills-content .progress h3 span {
     background-color: #114d6c;
 }
 
-/* Par défaut, le contenu est caché */
 .item-wrapper {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-  }
-  
-  /* Quand on clique (via JS), item--open s’ajoute */
-  .item.item--open .item-wrapper {
-    max-height: 1000px; /* Assez grand pour tout afficher. Ajuste si besoin */
-  }
-  .item-arrow {
-    transition: transform 0.3s ease;
-  }
-  
-  .item.item--open .item-arrow {
-    transform: rotate(90deg);
-  }
-    
-  .item-wrapper {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease, padding 0.3s ease;
     padding: 0 1rem;
-}
-
-.item--open .item-wrapper {
-    max-height: 1000px;
+  }
+  
+  .item--open .item-wrapper {
+    max-height: 1000px; /* suffit pour tout contenu */
     padding: 1rem;
-}
+  }
+  
 
 @media (max-width: 600px) {
     .item-name p {

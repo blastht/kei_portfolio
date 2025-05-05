@@ -63,23 +63,20 @@ if (installBtn) {
 
 
 
-// 📂 Accordéons (style "item-name" cliquable)
-document.querySelectorAll('.item-name').forEach(header => {
-  header.addEventListener('click', () => {
-    const parent = header.parentElement;
-    const isOpen = parent.classList.contains('item--open');
+function toggleAccordion(element) {
+  const item = element.parentElement;
+  const isOpen = item.classList.contains('item--open');
 
-    // Ferme tous les autres
-    document.querySelectorAll('.item').forEach(item => {
-      item.classList.remove('item--open');
-      const name = item.querySelector('.item-name');
-      if (name) name.setAttribute('aria-expanded', 'false');
-    });
-
-    // Ouvre le bon
-    if (!isOpen) {
-      parent.classList.add('item--open');
-      header.setAttribute('aria-expanded', 'true');
-    }
+  // Fermer tous les autres
+  document.querySelectorAll('.item').forEach(i => {
+    i.classList.remove('item--open');
+    i.querySelector('.item-name').setAttribute('aria-expanded', 'false');
   });
-});
+
+  // Ouvrir celui qu'on clique
+  if (!isOpen) {
+    item.classList.add('item--open');
+    element.setAttribute('aria-expanded', 'true');
+  }
+}
+

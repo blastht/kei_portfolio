@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://keiportfoliodev.netlify.app/</loc>
-    <lastmod>2025-05-29</lastmod>
-  </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://keiportfoliodev.netlify.app/</loc>
+  <lastmod>2025-05-29T17:12:39+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://keiportfoliodev.netlify.app/pdf/keitini_cossavella_cover_letter.pdf</loc>
+  <lastmod>2025-05-29T17:12:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://keiportfoliodev.netlify.app/projet_e5</loc>
+  <lastmod>2025-05-29T17:12:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://keiportfoliodev.netlify.app/stage1</loc>
+  <lastmod>2025-05-29T17:12:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://keiportfoliodev.netlify.app/pdf/Rapport_Stage.pdf</loc>
+  <lastmod>2025-05-29T17:12:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://keiportfoliodev.netlify.app/pdf/rapport_stage2.pdf</loc>
+  <lastmod>2025-05-29T17:12:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://keiportfoliodev.netlify.app/pdf/Synth%C3%A8se%20de%20veille%20technologique.pdf</loc>
+  <lastmod>2025-05-29T17:12:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>
